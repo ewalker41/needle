@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Factual Needle Popup</title>
+  
+  <style>
+      body {
+        min-width: 357px;
+        overflow-x: hidden;
+      }
+
+      img {
+        margin: 5px;
+        border: 2px solid black;
+        vertical-align: middle;
+        width: 75px;
+        height: 75px;
+      }
+    </style>
+</head>
+
+<body>
+<div class="" id="site-main">
+<div class="page-header">
+<h1>Add to Factual<br>
+</h1>
+</div>
+<div class="row data-submit-form presentation-well" style="margin-bottom: 0px;">
+<div class="span11 offset1">
+<form accept-charset="UTF-8" action="response" class="form-horizontal check-form" id="new_entity_form" method="post">
+  <div style="margin: 0pt; padding: 0pt; display: inline;"><input name="utf8" value="&#10003;" type="hidden"><input name="authenticity_token" value="goUbez//arnD2rjaq1ZDTqB7hFajfPEbALETDS11wqI=" type="hidden"></div>
+  <fieldset>
+  <div class="control-group"><label class="control-label required">User</label>
+  <div class="controls"><input id="submit_form_user" name="submit_form_user" value="ewalker41@gmail.com" type="text"> </div>
+  </div>
+  <div class="control-group"> <label class="control-label">Reference </label>
+  <div class="controls"><input id="submit_form_reference" name="submit_form_reference" placeholder="A reference to a URL, title, person, etc. that is the source of this data." type="text"> </div>
+  </div>
+  <div class="row">
+  <hr class="span10"></div>
+  <div class="update-fields">
+  <div class="control-group" title="Business/POI name"><label class="control-label">Name* </label>
+  <div class="controls"><input autocomplete="off" class="check-dirty" id="name" type="text"> </div>
+  </div>
+  <div class="control-group" title="Address number and street name"> <label class="control-label">Address* </label>
+  <div class="controls"><input autocomplete="off" class="check-dirty" id="address" type="text"> </div>
+  </div>
+  <div class="control-group" title="Additional address, incl. suite numbers"> <label class="control-label">Address Extended </label>
+  <div class="controls"><input autocomplete="off" class="check-dirty" id="address_extended" type="text"> </div>
+  </div>
+  <div class="control-group faceted" title="City, town or equivalent"> <label class="control-label">Locality (Town/City) </label>
+  <div class="controls"><input autocomplete="off" class="check-dirty facet" id="locality" type="text"> </div>
+  </div>
+  <div class="control-group faceted" title="State, province, territory, or equivalent"> <label class="control-label">Region (State/Province) </label>
+  <div class="controls"><input autocomplete="off" class="check-dirty facet" id="region" type="text"> </div>
+  </div>
+  <div class="control-group" title="Postcode or equivalent (zipcode in US)"> <label class="control-label">Post Code </label>
+  <div class="controls"><input autocomplete="off" class="check-dirty" id="postcode" type="text"> </div>
+  </div>
+  <div class="control-group faceted" title=""> <label class="control-label">Country* </label>
+  <div class="controls"><input autocomplete="off" class="check-dirty facet" id="country" type="text"> </div>
+  </div>
+  <div class="control-group" title="Authority page (official website)">
+  <label class="control-label">Website </label>
+  <div class="controls"><input autocomplete="off" class="check-dirty" id="website" type="text"> </div>
+  </div>
+  <div class="control-group" title="Latitude in decimal degrees (WGS84 datum). Value will not exceed 6 decimal places (0.111m)">
+  <label class="control-label">Latitude </label>
+  <div class="controls"><input autocomplete="off" class="check-dirty" id="latitude" type="text"> </div>
+  </div>
+  <div class="control-group" title="Longitude in decimal degrees (WGS84 datum). Value will not exceed 6 decimal places (0.111m)">
+  <label class="control-label">Longitude </label>
+  <div class="controls"><input autocomplete="off" class="check-dirty" id="longitude" type="text"> </div>
+  </div>
+  <div class="control-group" title="Telephone number with local formatting"> <label class="control-label">Tel </label>
+  <div class="controls"><input autocomplete="off" class="check-dirty" id="tel" type="text"> </div>
+  </div>
+  <div class="control-group" title="Fax number in local formatting"> <label class="control-label">Fax </label>
+  <div class="controls"><input autocomplete="off" class="check-dirty" id="fax" type="text"> </div>
+  </div>
+  <div class="control-group" title="Primary contact email address of organization"> <label class="control-label">Email </label>
+  <div class="controls"><input autocomplete="off" class="check-dirty" id="email" type="text"> </div>
+  </div>
+<!--
+  -Fields to add later
+  <div class="control-group"
+ title="PO Box. As they do not represent the physical location of a brick-and-mortar store, PO Boxes are often excluded from mobile use cases."><label 
+ class="control-label">PO Box </label>
+  <div class="controls"><input autocomplete="off" class="check-dirty"
+ id="po_box" type="text"> </div>
+  </div>
+  <div class="control-group faceted"
+ title="Category IDs that classify this entity."> <label
+ class="control-label">Category IDs </label>
+  <div class="controls"><input autocomplete="off"
+ class="check-dirty facet" id="category_ids" type="text"> </div>
+  </div>
+  <div class="control-group faceted"
+ title="Category labels that describe the category branch or 'breadcrumb'. ">
+  <label class="control-label">Category Labels </label>
+  <div class="controls"><input autocomplete="off"
+ class="check-dirty facet" id="category_labels" type="text"> </div>
+  </div>
+  <div class="control-group"
+ title="Indicates which chain (brand or franchise) this entity is a member of. See http://developer.factual.com/display/docs/Places+API+-+Chains for more information on Factual Chains.">
+  <label class="control-label">Chain ID </label>
+  <div class="controls"><input autocomplete="off" class="check-dirty"
+ id="chain_id" type="text"> </div>
+  </div>
+  <div class="control-group faceted"
+ title="Town/place employed in postal addressing. May not reflect the formal geographic location of a place.">
+  <label class="control-label">Post Town </label>
+  <div class="controls"><input autocomplete="off"
+ class="check-dirty facet" id="post_town" type="text"> </div>
+  </div>
+  <div class="control-group faceted"
+ title="Additional sub-division. Usually, but not always, a country sub-division">
+  <label class="control-label">Admin Region </label>
+  <div class="controls"><input autocomplete="off"
+ class="check-dirty facet" id="admin_region" type="text"> </div>
+  </div>
+  <div class="control-group"
+ title="Structured JSON representation of opening hours"> <label
+ class="control-label">Hours (display) </label>
+  <div class="controls"><input autocomplete="off" class="check-dirty"
+ id="hours_display" type="text"> </div>
+  </div>
+-->
+  </div>
+  </fieldset>
+  <div class="form-actions"> <button class="submit-button btn btn-primary" name="submit_button" type="submit">Submit </button></div>
+</form>
+</div>
+</div>
+</div>
+
+</body>
+</html>

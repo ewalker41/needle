@@ -1,0 +1,20 @@
+{
+  "name": "Needle-beta",
+  "description": "Sansa can keep her sewing needles, I've got a needle of my own",
+  "version": "0.6",
+  "permissions": ["contextMenus", "tabs", "http://www.factual.com/*", "<all_urls>"],
+  "icons": {
+    "16": "icon-bitty.png",
+    "48": "icon-small.png"
+  },
+  "background": {
+    "scripts": ["needle.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*", "file:///*/*"],
+      "js": ["thehound.js"]
+    }
+  ],
+  "manifest_version": 2
+}
